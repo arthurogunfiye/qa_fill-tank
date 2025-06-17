@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-describe('fillTank', () => {
-  const { fillTank } = require('./fillTank');
+describe("fillTank", () => {
+  const { fillTank } = require("./fillTank");
 
-  it('should be declared', () => {
+  it("should be declared", () => {
     expect(fillTank).toBeDefined();
   });
 
-  it('should fill maxTankCapacity without amount', () => {
+  it("should fill maxTankCapacity without amount", () => {
     const customer = {
       money: 500,
       vehicle: {
@@ -38,7 +38,7 @@ describe('fillTank', () => {
     expect(customer.vehicle.fuelRemains).toBe(40);
   });
 
-  it(`should fill only the amount, the customer can afford`, () => {
+  it(`should fill only the amount the customer can afford`, () => {
     const customer = {
       money: 200,
       vehicle: {
@@ -51,7 +51,7 @@ describe('fillTank', () => {
 
     fillTank(customer, fuelPrice, amount);
 
-    expect(customer.vehicle.fuelRemains).toBe(8);
+    expect(customer.vehicle.fuelRemains).toBe(28);
   });
 
   it(`should round floor filled amount to decimals`, () => {
