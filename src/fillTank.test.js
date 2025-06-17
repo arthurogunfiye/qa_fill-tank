@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
-describe("fillTank", () => {
-  const { fillTank } = require("./fillTank");
+describe('fillTank', () => {
+  const { fillTank } = require('./fillTank');
 
-  it("should be declared", () => {
+  it('should be declared', () => {
     expect(fillTank).toBeDefined();
   });
 
-  it("should fill maxTankCapacity without amount", () => {
+  it('should fill maxTankCapacity without amount', () => {
     const customer = {
       money: 500,
       vehicle: {
